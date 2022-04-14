@@ -1,4 +1,4 @@
-package goaurestclientprometheus
+package aurestclientprometheus
 
 import (
 	"net/url"
