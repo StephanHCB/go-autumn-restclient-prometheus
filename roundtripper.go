@@ -14,8 +14,8 @@ func NewPrometheusRoundTripper(wrapped http.RoundTripper) *PrometheusRoundTrippe
 	}
 }
 
-func (vrt *PrometheusRoundTripper) RoundTrip(req *http.Request) (res *http.Response, e error) {
-	RequestMetricsCallback(req.Context(), req.Method, req.RequestURI, 0, e, 0, int(req.ContentLength))
+func (vrt *PrometheusRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
+	RequestMetricsCallback(req.Context(), req.Method, req.RequestURI, 0, nil, 0, int(req.ContentLength))
 
 	response, err := vrt.wrapped.RoundTrip(req)
 
