@@ -3,7 +3,7 @@ module github.com/StephanHCB/go-autumn-restclient-prometheus
 go 1.18
 
 require (
-	github.com/StephanHCB/go-autumn-restclient v0.8.1
+	github.com/StephanHCB/go-autumn-restclient v0.9.0
 	github.com/prometheus/client_golang v1.20.5
 )
 
